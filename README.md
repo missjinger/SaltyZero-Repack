@@ -29,4 +29,5 @@ Note:
 1. Compile script project with configuration [RelWithDefInfo]. 
 2. The script name and export function name match the form of XXX.dll and Add_XXX() { new XXX(); } and fill XXX in Database.
 3. Game APIs are not complete but useful I'm trying to update.
+4. You can debug your scripts in the debugger directly as long as you set your debugger configuration same as the demo script [transmog].
 4. If you find any compiling error or any good suggestion just contact me.

@@ -24,3 +24,9 @@ Steps:
 3. Set your server conf to connect to the mysql on it's port with default 3306.
 
 4. Create a character and have fun.
+
+Note:
+1. Compile script project with configuration [RelWithDefInfo]. 
+2. The script name and export function name match the form of XXX.dll and Add_XXX() { new XXX(); } and fill XXX in Database.
+3. Game APIs are not complete but useful I'm trying to update.
+4. If you find any compiling error or any good suggestion just contact me.

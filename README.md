@@ -1,7 +1,9 @@
 # SaltyZero's Repack
-Description:
 Based on az2.0 and authorized by saltyzero@foxmail.com
-I'm intended to build one high expansibility and performance server with easy game APIs.
+
+Description:
+
+I'm intended to build one high expansibility and performance server with easy game APIs. Now, it has supported for various scripts by using external dll.
 
 Features:
 

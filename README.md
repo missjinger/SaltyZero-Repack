@@ -17,7 +17,7 @@ Requirements:
 
 Steps:
 
-1. Open mysql service.
+1. Open the mysql service.
 
 2. Import all sql within data folder and other script sql if you use it.
 
@@ -26,7 +26,7 @@ Steps:
 4. Create a character and have fun.
 
 Note:
-1. Compile script project with configuration [RelWithDefInfo]. 
+1. Compile the script project with configuration [RelWithDefInfo]. 
 
 2. The script name and the exported function name XXX matches the form of XXX.dll and AddSC_XXX() { new XXX(); } which will be filled in Database.
 

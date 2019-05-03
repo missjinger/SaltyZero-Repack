@@ -28,7 +28,7 @@ Steps:
 Note:
 1. Compile script project with configuration [RelWithDefInfo]. 
 
-2. The script name and export function name match the form of XXX.dll and Add_XXX() { new XXX(); } and fill XXX in Database.
+2. The script name and export function name match the form of XXX.dll and AddSC_XXX() { new XXX(); } and fill XXX in Database.
 
 3. Game APIs are not complete but useful I'm trying to update.
 

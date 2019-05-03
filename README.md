@@ -21,6 +21,6 @@ Steps:
 
 2. Open mysql service.
 
-3. Set your server conf connect to the mysql on it's port default 8085.
+3. Set your server conf to connect to the mysql on it's port with default 3306.
 
-3. Have fun.
+3. Create a character and have fun.

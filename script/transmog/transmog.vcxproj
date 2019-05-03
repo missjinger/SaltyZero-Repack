@@ -122,7 +122,7 @@
       <CompileAs>CompileAsCpp</CompileAs>
       <DisableSpecificWarnings>4996;4355;4244;4985;4267;4619</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors>4263;4264</TreatSpecificWarningsAsErrors>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\script\include;$(ProjectDir)..\..\script\include\common;$(ProjectDir)..\..\script\include\common\Collision;$(ProjectDir)..\..\script\include\common\Database;$(ProjectDir)..\..\script\include\common\DataStores;$(ProjectDir)..\..\script\include\common\Dynamic;$(ProjectDir)..\..\script\include\common\Packets;$(ProjectDir)..\..\script\include\common\Threading;$(ProjectDir)..\..\script\include\common\Utilities;$(ProjectDir)..\..\script\include\Detour;$(ProjectDir)..\..\script\include\Recast;D:\Packages\mysql\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\script\include;$(ProjectDir)..\..\script\include\common;$(ProjectDir)..\..\script\include\common\Collision;$(ProjectDir)..\..\script\include\common\Database;$(ProjectDir)..\..\script\include\common\DataStores;$(ProjectDir)..\..\script\include\common\Dynamic;$(ProjectDir)..\..\script\include\common\Packets;$(ProjectDir)..\..\script\include\common\Threading;$(ProjectDir)..\..\script\include\common\Utilities;$(ProjectDir)..\..\script\include\Detour;$(ProjectDir)..\..\script\include\Recast;$(ProjectDir)..\..\script\include\mysql;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /Zm500 /utf-8</AdditionalOptions>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_module=extern "C" _declspec(dllexport);%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>

@@ -1,0 +1,79 @@
+#
+# SaltyZero's Repack
+#
+
+conf/*
+!conf/*.dist
+data/dbc
+data/maps
+data/vmaps
+script/**/*.vs
+script/**/*.sln
+*.pdb
+
+!.gitkeep
+
+#
+#Generic
+#
+
+.directory
+.mailmap
+*.orig
+*.rej
+*~
+.hg/
+*.kdev*
+.DS_Store
+CMakeLists.txt.user
+*.bak
+*.patch
+*.diff
+*.REMOTE.*
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+
+#
+# IDE & other software
+#
+/.settings/
+/.externalToolBuilders/*
+# exclude in all levels
+nbproject/
+.sync.ffs_db
+*.kate-swp
+.browse.VC*
+.vscode
+.idea
+cmake-build-debug/*
+
+#
+# Eclipse
+#
+*.pydevproject
+.metadata
+.gradle
+tmp/
+*.tmp
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.project
+.cproject
+
+
+# ==================
+#
+#  CUSTOM
+#  
+#  put below your custom ignore rules
+#  for example , if you want to include a 
+#  module directly in repositoryyou can do:
+#
+#  !modules/yourmodule
+#
+# ==================
+

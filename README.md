@@ -1,5 +1,5 @@
-# SaltyZero-s-Repack
-based on az2.0
+# SaltyZero's Repack
+based on az2.0 and authorized by saltyzero@foxmail.com
 
 Features:
 

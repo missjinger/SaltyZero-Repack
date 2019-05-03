@@ -13,7 +13,7 @@ Requirements:
 
 1. If you play at localhost just requiring [mysql] and one mysql database browser just like [navicat] or [heidisql].
 
-2. If you open it on internet and that will requirie one host tool just like [apache].
+2. If you open it on the internet and that will requirie one host tool just like [apache].
 
 Steps:
 

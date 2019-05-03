@@ -1,5 +1,7 @@
 # SaltyZero's Repack
-based on az2.0 and authorized by saltyzero@foxmail.com
+Description:
+Based on az2.0 and authorized by saltyzero@foxmail.com
+I'm intended to build one high expansibility and performance server with easy game APIs.
 
 Features:
 

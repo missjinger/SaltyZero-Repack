@@ -17,10 +17,10 @@ Requirements:
 
 Steps:
 
-1. Import all sql within data folder and other script sql if you use it.
+1. Open mysql service.
 
-2. Open mysql service.
+2. Import all sql within data folder and other script sql if you use it.
 
 3. Set your server conf to connect to the mysql on it's port with default 3306.
 
-3. Create a character and have fun.
+4. Create a character and have fun.

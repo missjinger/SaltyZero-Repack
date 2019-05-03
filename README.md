@@ -13,7 +13,7 @@ Requirements:
 
 1. If you play at localhost just requiring [mysql] and one mysql database browser just like [navicat] or [heidisql].
 
-2. If you open it on internet that will requirie one host tool just like [apache].
+2. If you open it on internet and that will requirie one host tool just like [apache].
 
 Steps:
 
@@ -27,7 +27,11 @@ Steps:
 
 Note:
 1. Compile script project with configuration [RelWithDefInfo]. 
+
 2. The script name and export function name match the form of XXX.dll and Add_XXX() { new XXX(); } and fill XXX in Database.
+
 3. Game APIs are not complete but useful I'm trying to update.
+
 4. You can debug your scripts in the debugger directly as long as you set your debugger configuration as the same as the demo script [transmog].
+
 5. If you find any compiling error or any good suggestion just contact me.

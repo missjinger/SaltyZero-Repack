@@ -153,5 +153,5 @@ class BattlegroundMgr
         BattleMastersMap mBattleMastersMap;
 };
 
-#define sBattlegroundMgr ACE_Singleton<BattlegroundMgr, ACE_Null_Mutex>::instance()
+#define sBattlegroundMgr getMgr<BattlegroundMgr, ACE_Null_Mutex>()
 #endif

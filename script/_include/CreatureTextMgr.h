@@ -103,7 +103,7 @@ class CreatureTextMgr
         LocaleCreatureTextMap mLocaleTextMap;
 };
 
-#define sCreatureTextMgr ACE_Singleton<CreatureTextMgr, ACE_Null_Mutex>::instance()
+#define sCreatureTextMgr getMgr<CreatureTextMgr, ACE_Null_Mutex>()
 
 template<class Builder>
 class CreatureTextLocalizer

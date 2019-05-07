@@ -748,6 +748,6 @@ class SpellMgr
         TalentAdditionalSet        mTalentSpellAdditionalSet;
 };
 
-#define sSpellMgr ACE_Singleton<SpellMgr, ACE_Null_Mutex>::instance()
+#define sSpellMgr getMgr<SpellMgr, ACE_Null_Mutex>()
 
 #endif

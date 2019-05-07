@@ -51,5 +51,5 @@ class LootItemStorage
         LootItemContainer lootItemStore;
 };
 
-#define sLootItemStorage ACE_Singleton<LootItemStorage, ACE_Thread_Mutex>::instance()
+#define sLootItemStorage getMgr<LootItemStorage, ACE_Thread_Mutex>()
 #endif

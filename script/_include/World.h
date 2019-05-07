@@ -887,6 +887,6 @@ class World
         std::string m_configFileList;
 };
 
-#define sWorld ACE_Singleton<World, ACE_Null_Mutex>::instance()
+#define sWorld getMgr<World, ACE_Null_Mutex>()
 #endif
 /// @}

@@ -26,7 +26,7 @@ class Master
         void ClearOnlineAccounts();
 };
 
-#define sMaster ACE_Singleton<Master, ACE_Null_Mutex>::instance()
+#define sMaster getMgr<Master, ACE_Null_Mutex>()
 
 #endif
 

@@ -37,6 +37,6 @@ protected:
     GuildContainer GuildStore;
 };
 
-#define sGuildMgr ACE_Singleton<GuildMgr, ACE_Null_Mutex>::instance()
+#define sGuildMgr getMgr<GuildMgr, ACE_Null_Mutex>()
 
 #endif

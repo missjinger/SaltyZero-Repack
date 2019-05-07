@@ -280,5 +280,5 @@ class ObjectAccessor
         mutable ACE_Thread_Mutex DelayedCorpseLock;
 };
 
-#define sObjectAccessor ACE_Singleton<ObjectAccessor, ACE_Null_Mutex>::instance()
+#define sObjectAccessor getMgr<ObjectAccessor, ACE_Null_Mutex>()
 #endif

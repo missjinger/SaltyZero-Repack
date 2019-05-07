@@ -169,7 +169,7 @@ class GameEventMgr
         std::set<uint32> modifiedHolidays;
 };
 
-#define sGameEventMgr ACE_Singleton<GameEventMgr, ACE_Null_Mutex>::instance()
+#define sGameEventMgr getMgr<GameEventMgr, ACE_Null_Mutex>()
 
 bool IsHolidayActive(HolidayIds id);
 bool IsEventActive(uint16 event_id);

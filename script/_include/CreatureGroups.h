@@ -69,6 +69,6 @@ class CreatureGroup
         bool m_Formed;
 };
 
-#define sFormationMgr ACE_Singleton<FormationMgr, ACE_Null_Mutex>::instance()
+#define sFormationMgr getMgr<FormationMgr, ACE_Null_Mutex>()
 
 #endif

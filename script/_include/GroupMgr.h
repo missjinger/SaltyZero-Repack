@@ -37,6 +37,6 @@ protected:
     GroupContainer   GroupStore;
 };
 
-#define sGroupMgr ACE_Singleton<GroupMgr, ACE_Null_Mutex>::instance()
+#define sGroupMgr getMgr<GroupMgr, ACE_Null_Mutex>()
 
 #endif

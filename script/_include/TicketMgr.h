@@ -246,6 +246,6 @@ protected:
     uint64 _lastChange;
 };
 
-#define sTicketMgr ACE_Singleton<TicketMgr, ACE_Null_Mutex>::instance()
+#define sTicketMgr getMgr<TicketMgr, ACE_Null_Mutex>()
 
 #endif // _TICKETMGR_H

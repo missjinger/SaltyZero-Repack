@@ -63,6 +63,6 @@ class WaypointMgr
         WaypointPathContainer _waypointStore;
 };
 
-#define sWaypointMgr ACE_Singleton<WaypointMgr, ACE_Null_Mutex>::instance()
+#define sWaypointMgr getMgr<WaypointMgr, ACE_Null_Mutex>()
 
 #endif

@@ -76,6 +76,6 @@ class SystemMgr
         static ScriptPointVector const _empty;
 };
 
-#define sScriptSystemMgr ACE_Singleton<SystemMgr, ACE_Null_Mutex>::instance()
+#define sScriptSystemMgr getMgr<SystemMgr, ACE_Null_Mutex>()
 
 #endif

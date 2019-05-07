@@ -10,7 +10,9 @@ if exist %name% del /s /q %name% & rd /s /q %name%
 if not exist %name% md %name% & md %name%\src
 
 :: create .h and .cpp
-echo=> %name%\src\%name%.h & echo=> %name%\src\%name%.cpp
+echo=> %name%\src\%name%.h & echo=#include ^"%name%.h^"> %name%\src\%name%.cpp & ^
+echo,>> %name%\src\%name%.cpp & ^
+echo _module void AddSC_%name%^(^) { new %name%^(^); }>> %name%\src\%name%.cpp
 
 :: create .vcxproj for compiling
 (echo ^<?xml version=^"1.0^" encoding=^"utf-8^"?^> & ^
@@ -60,14 +62,14 @@ echo      ^<RuntimeTypeInfo^>true^<^/RuntimeTypeInfo^> & ^
 echo      ^<CompileAs^>CompileAsCpp^<^/CompileAs^> & ^
 echo      ^<DisableSpecificWarnings^>4996;4355;4244;4985;4267;4619^<^/DisableSpecificWarnings^> & ^
 echo      ^<TreatSpecificWarningsAsErrors^>4263;4264^<^/TreatSpecificWarningsAsErrors^> & ^
-echo      ^<AdditionalIncludeDirectories^>$^(ProjectDir^)..\..\script\_include;$^(ProjectDir^)..\..\script\_include\common;$^(ProjectDir^)..\..\script\_include\common\Collision;$^(ProjectDir^)..\..\script\_include\common\Database;$^(ProjectDir^)..\..\script\_include\common\DataStores;$^(ProjectDir^)..\..\script\_include\common\Dynamic;$^(ProjectDir^)..\..\script\_include\common\Packets;$^(ProjectDir^)..\..\script\_include\common\Threading;$^(ProjectDir^)..\..\script\_include\common\Utilities;$^(ProjectDir^)..\..\script\_include\Detour;$^(ProjectDir^)..\..\script\_include\Recast;$^(ProjectDir^)..\..\script\_include\mysql;%^(AdditionalIncludeDirectories^)^<^/AdditionalIncludeDirectories^> & ^
-echo      ^<AdditionalOptions^>%^(AdditionalOptions^) ^/Zm500 ^/utf-8^<^/AdditionalOptions^> & ^
-echo      ^<PreprocessorDefinitions^>WIN32;_WINDOWS;NDEBUG;_module=extern ^"C^" _declspec^(dllexport^);%^(PreprocessorDefinitions^)^<^/PreprocessorDefinitions^> & ^
+echo      ^<AdditionalIncludeDirectories^>$^(ProjectDir^)..\..\script\_include;$^(ProjectDir^)..\..\script\_include\common;$^(ProjectDir^)..\..\script\_include\common\Collision;$^(ProjectDir^)..\..\script\_include\common\Database;$^(ProjectDir^)..\..\script\_include\common\DataStores;$^(ProjectDir^)..\..\script\_include\common\Dynamic;$^(ProjectDir^)..\..\script\_include\common\Packets;$^(ProjectDir^)..\..\script\_include\common\Threading;$^(ProjectDir^)..\..\script\_include\common\Utilities;$^(ProjectDir^)..\..\script\_include\Detour;$^(ProjectDir^)..\..\script\_include\Recast;$^(ProjectDir^)..\..\script\_include\mysql;%%^(AdditionalIncludeDirectories^)^<^/AdditionalIncludeDirectories^> & ^
+echo      ^<AdditionalOptions^>%%^(AdditionalOptions^) ^/Zm500 ^/utf-8^<^/AdditionalOptions^> & ^
+echo      ^<PreprocessorDefinitions^>WIN32;_WINDOWS;NDEBUG;_module=extern ^"C^" _declspec^(dllexport^);%%^(PreprocessorDefinitions^)^<^/PreprocessorDefinitions^> & ^
 echo    ^<^/ClCompile^> & ^
 echo    ^<Link^> & ^
-echo      ^<AdditionalLibraryDirectories^>%^(AdditionalLibraryDirectories^)^<^/AdditionalLibraryDirectories^> & ^
+echo      ^<AdditionalLibraryDirectories^>%%^(AdditionalLibraryDirectories^)^<^/AdditionalLibraryDirectories^> & ^
 echo      ^<AdditionalDependencies^>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;ace.dll;worldserver.dll^<^/AdditionalDependencies^> & ^
-echo      ^<IgnoreSpecificDefaultLibraries^>%^(IgnoreSpecificDefaultLibraries^)^<^/IgnoreSpecificDefaultLibraries^> & ^
+echo      ^<IgnoreSpecificDefaultLibraries^>%%^(IgnoreSpecificDefaultLibraries^)^<^/IgnoreSpecificDefaultLibraries^> & ^
 echo      ^<GenerateDebugInformation^>true^<^/GenerateDebugInformation^> & ^
 echo      ^<SubSystem^>Console^<^/SubSystem^> & ^
 echo      ^<ImageHasSafeExceptionHandlers^>true^<^/ImageHasSafeExceptionHandlers^> & ^
@@ -76,8 +78,7 @@ echo    ^<ProjectReference^> & ^
 echo      ^<LinkLibraryDependencies^>false^<^/LinkLibraryDependencies^> & ^
 echo    ^<^/ProjectReference^> & ^
 echo    ^<PostBuildEvent^> & ^
-echo      ^<Command^>xcopy ^/Y ^"$^(OutDir^)$^(TargetFileName^)^" ^"$^(ProjectDir^)..\^" & ^
-echo xcopy ^/Y ^"$^(ProjectDir^)conf\*.dist^" ^"$^(ProjectDir^)..\..\conf\^"^<^/Command^> & ^
+echo      ^<Command^>xcopy ^/Y ^"$^(OutDir^)$^(TargetFileName^)^" ^"$^(ProjectDir^)..\^"^<^/Command^> & ^
 echo    ^<^/PostBuildEvent^> & ^
 echo  ^<^/ItemDefinitionGroup^> & ^
 echo  ^<ItemGroup^> & ^
@@ -89,7 +90,7 @@ echo  ^<^/ItemGroup^> & ^
 echo  ^<Import Project=^"$^(VCTargetsPath^)\Microsoft.Cpp.targets^" ^/^> & ^
 echo  ^<ImportGroup Label=^"ExtensionTargets^"^> & ^
 echo  ^<^/ImportGroup^> & ^
-echo ^<^/Project^>) > "%name%\%name%.vcxproj"
+echo ^<^/Project^>)> "%name%\%name%.vcxproj"
 
 :: create .vcxproj.user only for debugging
 (echo ^<?xml version=^"1.0^" encoding=^"utf-8^"?^> & ^
@@ -100,6 +101,6 @@ echo    ^<DebuggerFlavor^>WindowsLocalDebugger^<^/DebuggerFlavor^> & ^
 echo    ^<LocalDebuggerWorkingDirectory^>..\..\build\az2.0\bin\RelWithDebInfo^<^/LocalDebuggerWorkingDirectory^> & ^
 echo    ^<LocalDebuggerAttach^>false^<^/LocalDebuggerAttach^> & ^
 echo  ^<^/PropertyGroup^> & ^
-echo ^<^/Project^>) > "%name%\%name%.vcxproj.user"
+echo ^<^/Project^>)> "%name%\%name%.vcxproj.user"
 
 start %name%

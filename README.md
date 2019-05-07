@@ -1,5 +1,5 @@
 # SaltyZero's Repack
-Based on az2.0 and authorized by saltyzero@foxmail.com
+Based on Azerothcore v2.0.0 and authorized by saltyzero@foxmail.com
 
 Description:
 

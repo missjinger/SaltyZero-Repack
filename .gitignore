@@ -10,6 +10,7 @@ data/vmaps
 script/**/*.vs
 script/**/*.sln
 *.pdb
+Crashes
 
 !.gitkeep
 

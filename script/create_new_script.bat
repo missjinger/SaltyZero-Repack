@@ -10,9 +10,13 @@ if exist %name% del /s /q %name% & rd /s /q %name%
 if not exist %name% md %name% & md %name%\src
 
 :: create .h and .cpp
+<<<<<<< HEAD
 echo=> %name%\src\%name%.h & echo=#include ^"%name%.h^"> %name%\src\%name%.cpp & ^
 echo,>> %name%\src\%name%.cpp & ^
 echo _module void AddSC_%name%^(^) { new %name%^(^); }>> %name%\src\%name%.cpp
+=======
+echo=> %name%\src\%name%.h & echo #include ^"%name%.h^" > %name%\src\%name%.cpp
+>>>>>>> 3ea9499816a2b6ad7c9638e865b8a5a76c645ab3
 
 :: create .vcxproj for compiling
 (echo ^<?xml version=^"1.0^" encoding=^"utf-8^"?^> & ^

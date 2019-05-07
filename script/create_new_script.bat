@@ -10,7 +10,7 @@ if exist %name% del /s /q %name% & rd /s /q %name%
 if not exist %name% md %name% & md %name%\src
 
 :: create .h and .cpp
-echo=> %name%\src\%name%.h & echo=> %name%\src\%name%.cpp
+echo=> %name%\src\%name%.h & echo #include ^"%name%.h^" > %name%\src\%name%.cpp
 
 :: create .vcxproj for compiling
 (echo ^<?xml version=^"1.0^" encoding=^"utf-8^"?^> & ^

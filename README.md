@@ -13,6 +13,8 @@ Features:
 
 3. More APIs is coming....soon.
 
+4. Use the cmd [create_new_script] to create a new scirpt project with the default configuration [RelWithDebInfo|Win32].
+
 Requirements:
 
 1. If you play at localhost just requiring [mysql] and one mysql database browser just like [navicat] or [heidisql].

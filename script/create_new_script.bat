@@ -96,9 +96,9 @@ echo ^<^/Project^>)> "%name%\%name%.vcxproj"
 (echo ^<?xml version=^"1.0^" encoding=^"utf-8^"?^> & ^
 echo ^<Project ToolsVersion=^"14.0^" xmlns=^"http:^/^/schemas.microsoft.com^/developer^/msbuild^/2003^"^> & ^
 echo  ^<PropertyGroup Condition=^"^'$^(Configuration^)^|$^(Platform^)^'==^'RelWithDebInfo^|Win32^'^"^> & ^
-echo    ^<LocalDebuggerCommand^>$^(LocalDebuggerWorkingDirectory^)worldserver.exe^<^/LocalDebuggerCommand^> & ^
+echo    ^<LocalDebuggerCommand^>$^(LocalDebuggerWorkingDirectory^)\worldserver.exe^<^/LocalDebuggerCommand^> & ^
 echo    ^<DebuggerFlavor^>WindowsLocalDebugger^<^/DebuggerFlavor^> & ^
-echo    ^<LocalDebuggerWorkingDirectory^>$^(ProjectDir^)..\..\^<^/LocalDebuggerWorkingDirectory^> & ^
+echo    ^<LocalDebuggerWorkingDirectory^>$^(ProjectDir^)..\..^<^/LocalDebuggerWorkingDirectory^> & ^
 echo    ^<LocalDebuggerAttach^>false^<^/LocalDebuggerAttach^> & ^
 echo  ^<^/PropertyGroup^> & ^
 echo ^<^/Project^>)> "%name%\%name%.vcxproj.user"

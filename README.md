@@ -3,7 +3,7 @@ Based on Azerothcore v2.0.0 and authorized by saltyzero@foxmail.com
 
 Description:
 
-I'm intended to build one high expansibility and performance server with easy game APIs. Now, it has supported for various scripts by using external dll.
+I'm intended to build one high expansibility and performance server with easy game APIs. Now, it has supported for various scripts by using external dll. All files are about 77MB.
 
 Features:
 

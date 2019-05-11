@@ -7,7 +7,7 @@ I'm intended to build one high expansibility and performance server with easy ga
 
 Features:
 
-1. Use game APIs with C++ rather than Eluna to override your own scripts just like it in demo project [transmog].
+1. Use game APIs with C++ rather than Eluna to override your own scripts just like it in demo project [transmog] or [world_chat].
 
 2. More brief file structure.
 
@@ -38,6 +38,6 @@ Note:
 
 3. Game APIs are not complete but useful I'm trying to update.
 
-4. You can debug your scripts in the debugger directly as long as you set your debugger configuration as the same as the demo script [transmog].
+4. You can debug your scripts in the debugger directly as long as you set your debugger configuration as the same as the demo script [transmog] or [world_chat].
 
 5. If you find any compiling error or any good suggestion just contact me.

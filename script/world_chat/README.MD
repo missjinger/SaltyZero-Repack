@@ -1,0 +1,1 @@
+1. In client chat box use [/O ...some message...]

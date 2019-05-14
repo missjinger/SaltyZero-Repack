@@ -78,7 +78,8 @@ echo    ^<ProjectReference^> & ^
 echo      ^<LinkLibraryDependencies^>false^<^/LinkLibraryDependencies^> & ^
 echo    ^<^/ProjectReference^> & ^
 echo    ^<PostBuildEvent^> & ^
-echo      ^<Command^>xcopy ^/Y ^"$^(OutDir^)$^(TargetFileName^)^" ^"$^(ProjectDir^)..\^"^<^/Command^> & ^
+echo      ^<Command^>xcopy ^/Y ^"$^(OutDir^)$^(TargetFileName^)^" ^"$^(ProjectDir^)..\^" & ^
+echo if exist conf\*.conf.dist xcopy ^/Y ^"^$^(ProjectDir^)conf\*.dist^" ^"^$^(ProjectDir^)..\..\conf\^"^<^/Command^> & ^
 echo    ^<^/PostBuildEvent^> & ^
 echo  ^<^/ItemDefinitionGroup^> & ^
 echo  ^<ItemGroup^> & ^
